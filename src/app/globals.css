@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+:root {
+  --themeColor_1: rgb(34, 40, 49);
+  --themeColor_1_light: rgb(148, 137, 121);
+  --themeColor_1_dark: rgb(0, 0, 0);
+
+  --themeColor_2: rgb(0, 255, 0);
+  --themeColor_2_light: rgb(57, 184, 34);
+  --themeColor_2_dark: rgb(3, 83, 0);
+
+  --textColor_1: rgb(0, 0, 0);
+  --textColor_1_dark: rgb(0, 0, 0);
+
+  --textColor_2: rgb(0, 255, 0);
+  --textColor_2_dark: rgb(16, 93, 0);
+
+  --textColor_3: rgb(255, 255, 255);
+  --textColor_4: rgb(0, 0, 0);
+
+  --black: #171717;
+  --white: #ffffff;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--themeColor_1);
+  color: var(--textColor_3);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Add to your global CSS */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-slideInLeft {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+/* Circular overlay animation */
+@keyframes circular-overlay {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+    width: 200vh;
+    height: 200vh;
+    border-radius: 50%;
+  }
+}
+
+/* Delayed fade-in for menu items */
+@keyframes fade-in-delay {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  80% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-circular-overlay {
+  animation: circular-overlay 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-fade-in-delay {
+  animation: fade-in-delay 1s ease-out forwards;
+}
+
+/* Button animation styles */
+.rotate-45 {
+  transform: rotate(45deg);
+}
+
+.transition-all {
+  transition-property: all;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
