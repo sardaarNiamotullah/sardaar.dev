@@ -9,6 +9,7 @@ export default function Header() {
 
   const navLinks = [
     { name: "About", href: "#about" },
+    { name: "Education", href: "#education" },
     { name: "Projects", href: "#projects" },
     { name: "Tools", href: "#tools" },
     { name: "Certifications", href: "#certifications" },
@@ -24,7 +25,10 @@ export default function Header() {
       <nav className="absolute top-0 left-0 right-0 z-50 px-16 py-10 lg:px-20 lg:py-20">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Website Name - Left */}
-          <Link href="/" className="text-[var(--textColor_2)] font-bold text-xl">
+          <Link
+            href="/"
+            className="text-[var(--textColor_2)] font-bold text-xl"
+          >
             <span className="text-[var(--textColor_3)]">sardaar</span>.dev
           </Link>
 
@@ -89,15 +93,21 @@ export default function Header() {
       {mobileMenuOpen && (
         <div className="md:hidden fixed inset-0 z-40 overflow-hidden">
           {/* Circular overlay */}
-          <div 
+          <div
             className="absolute bg-[var(--themeColor_1)] rounded-full animate-circular-overlay"
             style={{
-              top: buttonRef.current ? buttonRef.current.offsetTop + buttonRef.current.offsetHeight/2 : '50%',
-              left: buttonRef.current ? buttonRef.current.offsetLeft + buttonRef.current.offsetWidth/2 : '50%',
-              transform: 'translate(-50%, -50%) scale(0)',
+              top: buttonRef.current
+                ? buttonRef.current.offsetTop +
+                  buttonRef.current.offsetHeight / 2
+                : "50%",
+              left: buttonRef.current
+                ? buttonRef.current.offsetLeft +
+                  buttonRef.current.offsetWidth / 2
+                : "50%",
+              transform: "translate(-50%, -50%) scale(0)",
             }}
           ></div>
-          
+
           {/* Menu content - only visible after animation */}
           <div className="relative z-50 h-full w-full flex flex-col items-center justify-center opacity-0 animate-fade-in-delay">
             <div className="flex flex-col items-center space-y-8">

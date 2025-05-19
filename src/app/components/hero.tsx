@@ -4,12 +4,12 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
+const phrases = ["Software Engineer", "Full Stack Developer"];
 export default function Hero() {
   const [typingText, setTypingText] = useState("");
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
 
-  const phrases = ["Software Engineer", "Web and App Developer"];
   const typingSpeed = 50;
   const deletingSpeed = 20;
   const pauseBetweenPhrases = 1500;
@@ -51,7 +51,6 @@ export default function Hero() {
     <>
       {/* Mobile View */}
       <section className="md:hidden w-screen h-screen relative flex flex-col items-center justify-center p-4 pt-20">
-
         {/* Profile Image - Top */}
         <div className="relative w-48 h-48 rounded-lg overflow-hidden border-2 border-[var(--themeColor_2)] mb-8 z-10">
           <Image
@@ -67,7 +66,9 @@ export default function Hero() {
 
         {/* Content - Bottom */}
         <div className="text-center z-10">
-          <div className="text-[var(--textColor_3)] text-lg mb-2">Hi, I'm</div>
+          <div className="text-[var(--textColor_3)] text-lg mb-2">
+            Hi, I&apos;m
+          </div>
           <h1 className="text-[var(--textColor_2)] text-4xl font-bold mb-4">
             <span className="font-light text-[var(--textColor_3)]">
               Sardaar
@@ -77,7 +78,9 @@ export default function Hero() {
 
           <div className="text-[var(--textColor_3)] text-xl mb-4 h-8">
             {typingText}
-            <span className="animate-blink text-[var(--textColor_2)] font-bold">_</span>
+            <span className="animate-blink text-[var(--textColor_2)] font-bold">
+              _
+            </span>
           </div>
 
           <div className="text-[var(--textColor_3)] text-lg mb-6">
@@ -141,11 +144,9 @@ export default function Hero() {
 
       {/* Desktop/Tablet View */}
       <section className="hidden md:flex w-screen h-screen relative items-center justify-center pt-16">
-
         {/* Content Container - Now with max-w-4xl (1024px) on lg screens */}
         <div className="w-full h-1/2 z-1 flex justify-center -mt-16">
           <div className="w-full max-w-3xl h-full flex">
-
             {/* Image div */}
             <div className="w-1/3 h-full flex items-center justify-center animate-slideInRight pl-8">
               <div className="relative w-full h-full max-w-md max-h-[400px] rounded-xl overflow-hidden border-2 border-[var(--themeColor_2)]">
@@ -165,7 +166,7 @@ export default function Hero() {
             {/* Intro div */}
             <div className="w-2/3 h-full flex flex-col justify-center pl-8 animate-slideInLeft">
               <div className="text-[var(--textColor_3)] text-lg mb-2">
-                Hi, I'm
+                Hi, I&apos;m
               </div>
               <h1 className="text-[var(--textColor_2)] text-5xl font-bold mb-4">
                 <span className="font-thin text-[var(--textColor_3)]">
@@ -176,7 +177,9 @@ export default function Hero() {
 
               <div className="text-[var(--textColor_3)] text-2xl mb-4 h-8">
                 {typingText}
-                <span className="animate-blink text-[var(--textColor_2)] font-bold">_</span>
+                <span className="animate-blink text-[var(--textColor_2)] font-bold">
+                  _
+                </span>
               </div>
 
               <div className="text-[var(--textColor_3)] text-xl mb-6">

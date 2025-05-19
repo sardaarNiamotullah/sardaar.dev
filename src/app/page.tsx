@@ -1,6 +1,12 @@
 import Header from "./components/header";
 import Hero from "./components/hero";
 import About from "./components/about";
+import Education from "./components/education";
+import Projects from "./components/projects";
+import Tools from "./components/tools";
+import Certifications from "./components/certifications";
+import Contact from "./components/contact";
+
 import Image from "next/image";
 
 export default function Home() {
@@ -24,6 +30,11 @@ export default function Home() {
         <Header />
         <Hero />
         <About />
+        <Education />
+        <Projects />
+        <Tools />
+        <Certifications />
+        <Contact />
       </div>
   
     </main>
