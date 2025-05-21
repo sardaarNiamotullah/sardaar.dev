@@ -27,7 +27,7 @@ export const itemVariants: Variants = {
 };
 
 export const cardVariants: Variants = {
-  hidden: { scale: 0.95, opacity: 0 },
+  hidden: { scale: 1, opacity: 0 },
   visible: {
     scale: 1,
     opacity: 1,

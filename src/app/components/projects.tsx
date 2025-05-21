@@ -370,7 +370,7 @@ export default function Projects() {
           </motion.p>
           <motion.h2
             variants={itemVariants}
-            className="text-[var(--textColor_3)] text-4xl font-light mb-4"
+            className="text-[var(--textColor_3)] text-4xl font-light mb-4 custom-font"
           >
             Projects
           </motion.h2>

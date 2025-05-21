@@ -10,7 +10,7 @@ import Footer from "./components/footer";
 
 import Image from "next/image";
 
-export default function Home() {
+export default async function Home() {
   return (
     <main className="relative w-full min-h-screen">
       {/* Background image - fixed to viewport */}

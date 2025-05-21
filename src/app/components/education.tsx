@@ -30,7 +30,7 @@ export default function Education() {
           </motion.p>
           <motion.h2
             variants={itemVariants}
-            className="text-[var(--textColor_3)] text-4xl font-light mb-4"
+            className="text-[var(--textColor_3)] text-4xl font-light mb-4 custom-font"
           >
             Education
           </motion.h2>

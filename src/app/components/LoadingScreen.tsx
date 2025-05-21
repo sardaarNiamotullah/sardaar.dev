@@ -53,13 +53,14 @@ export default function LoadingScreen() {
           />
         </div>
         
-        {/* <motion.p
-          initial={{ opacity: 0 }}
+        <motion.p
+          initial={{ opacity: 1 }}
           animate={{ opacity: 1 }}
-          className="text-[var(--textColor_3)] text-lg font-medium"
+          className="text-[var(--textColor_3)] text-sm font-medium"
         >
-          {Math.min(100, Math.round(progress))}%
-        </motion.p> */}
+          {/* {Math.min(100, Math.round(progress))}% */}
+          Loading...
+        </motion.p>
       </div>
     </motion.div>
   );
