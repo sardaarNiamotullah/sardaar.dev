@@ -36,6 +36,23 @@ body {
 
 
 /* Add to your global CSS */
+@keyframes slideInDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slideInDown {
+  animation: slideInDown 1.5s ease-out forwards;
+}
+
+
+
 @keyframes slideInLeft {
   from {
     transform: translateX(-50px);
@@ -53,7 +70,10 @@ body {
 }
 
 .animate-slideInLeft {
-  animation: slideInLeft 0.8s ease-out forwards;
+  animation: slideInLeft 1.5s ease-out forwards;
+}
+.animate-slideInLeft-m {
+  animation: slideInLeft 2s ease-out forwards;
 }
 
 .animate-blink {
@@ -72,7 +92,11 @@ body {
 }
 
 .animate-slideInRight {
-  animation: slideInRight 0.8s ease-out forwards;
+  animation: slideInRight 1.5s ease-out forwards;
+}
+
+.animate-slideInRight-m {
+  animation: slideInRight 2s ease-out forwards;
 }
 
 /* Circular overlay animation */

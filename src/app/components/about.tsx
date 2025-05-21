@@ -1,49 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { containerVariants, itemVariants, quoteVariants, Divider } from "../utils/animations";
 
 export default function About() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 10
-      }
-    }
-  };
-
-  const quoteVariants = {
-    hidden: { scale: 0.95, opacity: 0 },
-    visible: {
-      scale: 1,
-      opacity: 1,
-      transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 10,
-        delay: 0.4
-      }
-    }
-  };
-
   return (
     <section id="about" className="w-full py-24">
-      <div className="w-full max-w-3xl mx-auto px-4">
+      <div className="w-full max-w-4xl mx-auto px-4">
         {/* Section Header */}
         <motion.div
           initial="hidden"
@@ -56,7 +19,7 @@ export default function About() {
             variants={itemVariants}
             className="text-[var(--themeColor_3)] text-lg mb-2 tracking-widest"
           >
-            GET TO KNOW ME
+            GET TO KNOW MORE
           </motion.p>
           <motion.h2 
             variants={itemVariants}
@@ -78,10 +41,7 @@ export default function About() {
           variants={containerVariants}
           className="relative"
         >
-          {/* Glow effect */}
-          {/* <div className="absolute -inset-1 bg-[var(--themeColor_2)] opacity-10 blur-md"></div> */}
-          
-          <div className="relative bg-[var(--themeColor_1)]/70 backdrop-blur-sm p-8 rounded-lg border border-[var(--themeColor_2)]/20">
+          <div className="relative bg-[var(--themeColor_1)]/10 backdrop-blur-sm p-8 rounded-lg border border-[var(--themeColor_2)]/20 hover:border-[var(--themeColor_2)]/30">
             <motion.p 
               variants={quoteVariants}
               className="text-[var(--textColor_2)] text-center text-xl italic mb-8 font-light"
@@ -121,13 +81,7 @@ export default function About() {
         </motion.div>
 
         {/* Bottom divider */}
-        <motion.div 
-          initial={{ scaleX: 0 }}
-          whileInView={{ scaleX: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="w-3/4 h-px bg-[var(--themeColor_2)] rounded mx-auto mt-16 origin-right"
-        />
+        <Divider />
       </div>
     </section>
   );

@@ -6,6 +6,7 @@ import Projects from "./components/projects";
 import Tools from "./components/tools";
 import Certifications from "./components/certifications";
 import Contact from "./components/contact";
+import Footer from "./components/footer";
 
 import Image from "next/image";
 
@@ -32,11 +33,11 @@ export default function Home() {
         <About />
         <Education />
         <Projects />
-        <Tools />
         <Certifications />
+        <Tools />
         <Contact />
+        <Footer />
       </div>
-  
     </main>
   );
 }

@@ -2,9 +2,11 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import Link from "next/link";
 
 const phrases = ["Software Engineer", "Full Stack Developer"];
+
 export default function Hero() {
   const [typingText, setTypingText] = useState("");
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
@@ -52,7 +54,7 @@ export default function Hero() {
       {/* Mobile View */}
       <section className="md:hidden w-screen h-screen relative flex flex-col items-center justify-center p-4 pt-20">
         {/* Profile Image - Top */}
-        <div className="relative w-48 h-48 rounded-lg overflow-hidden border-2 border-[var(--themeColor_2)] mb-8 z-10">
+        <div className="relative w-48 h-48 rounded-lg overflow-hidden border-2 border-[var(--themeColor_2)] mb-8 z-10 animate-slideInRight-m">
           <Image
             src="/pictures/sardaar_Book.jpg"
             alt="Sardaar Niamotullah"
@@ -65,7 +67,7 @@ export default function Hero() {
         </div>
 
         {/* Content - Bottom */}
-        <div className="text-center z-10">
+        <div className="text-center z-10 animate-slideInLeft-m">
           <div className="text-[var(--textColor_3)] text-lg mb-2">
             Hi, I&apos;m
           </div>
@@ -95,12 +97,30 @@ export default function Hero() {
           </div>
 
           <div className="flex gap-4 mb-8 justify-center">
-            <button className="bg-[var(--themeColor_2)] text-[var(--textColor_4)] px-4 py-2 rounded hover:bg-[var(--themeColor_2_light)] transition-colors text-sm">
+            {/* Download CV Button */}
+            <motion.button
+              whileTap={{ scale: 0.95 }}
+              className="bg-[var(--themeColor_2)] text-[var(--textColor_4)] px-3 py-2 rounded hover:bg-[var(--themeColor_2_light)] transition-colors cursor-pointer text-sm"
+              onClick={() => {
+                const cvUrl = "/resume/sardaar_niamotullah-resume.pdf";
+                const link = document.createElement("a");
+                link.href = cvUrl;
+                link.download = "Sardaar_Niamotullah_CV.pdf";
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}
+            >
               Download CV
-            </button>
-            <button className="border border-[var(--themeColor_2)] text-[var(--textColor_3)] px-4 py-2 rounded hover:bg-[var(--themeColor_2)] hover:text-[var(--textColor_4)] transition-colors text-sm">
+            </motion.button>
+
+            {/* Contact Info Button */}
+            <Link
+              href="#contact"
+              className="border border-[var(--themeColor_2)] text-[var(--textColor_3)] px-3 py-2 rounded hover:bg-[var(--themeColor_2)] hover:text-[var(--textColor_4)] active:scale-95 transition-all cursor-pointer inline-block text-sm"
+            >
               Contact Info
-            </button>
+            </Link>
           </div>
 
           <div className="flex gap-4 justify-center">
@@ -108,7 +128,7 @@ export default function Hero() {
               href="https://linkedin.com/in/yourprofile"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[var(--themeColor_2)] hover:text-[var(--textColor_3)] transition-colors"
+              className="text-[var(--themeColor_3)] hover:text-[var(--textColor_2)] transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -125,7 +145,7 @@ export default function Hero() {
               href="https://github.com/yourusername"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[var(--themeColor_2)] hover:text-[var(--textColor_3)] transition-colors"
+              className="text-[var(--themeColor_3)] hover:text-[var(--textColor_2)] transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -194,20 +214,38 @@ export default function Hero() {
               </div>
 
               <div className="flex gap-4 mb-8">
-                <button className="bg-[var(--themeColor_2)] text-[var(--textColor_4)] px-6 py-2 rounded hover:bg-[var(--themeColor_2_dark)] hover:text-[var(--textColor_2)] transition-colors">
+                {/* Download CV Button */}
+                <motion.button
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-[var(--themeColor_2)] text-[var(--textColor_4)] px-4 py-2 rounded hover:bg-[var(--themeColor_2_light)] transition-colors cursor-pointer text-sm"
+                  onClick={() => {
+                    const cvUrl = "/resume/sardaar_niamotullah-resume.pdf";
+                    const link = document.createElement("a");
+                    link.href = cvUrl;
+                    link.download = "Sardaar_Niamotullah_CV.pdf";
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                  }}
+                >
                   Download CV
-                </button>
-                <button className="border border-[var(--themeColor_2)] text-[var(--textColor_3)] px-6 py-2 rounded hover:bg-[var(--themeColor_2)] hover:text-[var(--textColor_4)] transition-colors">
+                </motion.button>
+
+                {/* Contact Info Button */}
+                <Link
+                  href="#contact"
+                  className="border border-[var(--themeColor_2)] text-[var(--textColor_3)] px-4 py-2 rounded hover:bg-[var(--themeColor_2)] hover:text-[var(--textColor_4)] active:scale-95 transition-all cursor-pointer inline-block text-sm"
+                >
                   Contact Info
-                </button>
+                </Link>
               </div>
 
               <div className="flex gap-4">
                 <a
-                  href="https://linkedin.com/in/yourprofile"
+                  href="https://www.linkedin.com/in/sardaar-niamotullah/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[var(--themeColor_2)] hover:text-[var(--textColor_3)] transition-colors"
+                  className="text-[var(--themeColor_3)] hover:text-[var(--textColor_2)] transition-colors"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -221,10 +259,10 @@ export default function Hero() {
                   </svg>
                 </a>
                 <a
-                  href="https://github.com/yourusername"
+                  href="https://github.com/sardaarNiamotullah"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[var(--themeColor_2)] hover:text-[var(--textColor_3)] transition-colors"
+                  className="text-[var(--themeColor_3)] hover:text-[var(--textColor_2)] transition-colors"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
