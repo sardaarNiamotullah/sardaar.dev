@@ -56,7 +56,7 @@ export default function Hero() {
         {/* Profile Image - Top */}
         <div className="relative w-48 h-48 rounded-lg overflow-hidden border-2 border-[var(--themeColor_2)] mb-8 z-10 animate-slideInRight-m">
           <Image
-            src="/pictures/sardaar_Book.jpg"
+            src="/pictures/sardaar_withNoteBook.jpg"
             alt="Sardaar Niamotullah"
             fill
             className="object-cover scale-125"
@@ -102,7 +102,7 @@ export default function Hero() {
               whileTap={{ scale: 0.95 }}
               className="bg-[var(--themeColor_2)] text-[var(--textColor_4)] px-3 py-2 rounded hover:bg-[var(--themeColor_2_light)] transition-colors cursor-pointer text-sm"
               onClick={() => {
-                const cvUrl = "/resume/sardaar_niamotullah-resume.pdf";
+                const cvUrl = "/resume/sardaar_niamotullah-CV.pdf";
                 const link = document.createElement("a");
                 link.href = cvUrl;
                 link.download = "Sardaar_Niamotullah_CV.pdf";
@@ -171,7 +171,7 @@ export default function Hero() {
             <div className="w-1/3 h-full flex items-center justify-center animate-slideInRight pl-8">
               <div className="relative w-full h-full max-w-md max-h-[400px] rounded-xl overflow-hidden border-2 border-[var(--themeColor_2)]">
                 <Image
-                  src="/pictures/sardaar_Book.jpg"
+                  src="/pictures/sardaar_withNoteBook.jpg"
                   alt="Sardaar Niamotullah"
                   fill
                   className="object-cover scale-145"
@@ -219,7 +219,7 @@ export default function Hero() {
                   whileTap={{ scale: 0.95 }}
                   className="bg-[var(--themeColor_2)] text-[var(--textColor_4)] px-4 py-2 rounded hover:bg-[var(--themeColor_2_light)] transition-colors cursor-pointer text-sm"
                   onClick={() => {
-                    const cvUrl = "/resume/sardaar_niamotullah-resume.pdf";
+                    const cvUrl = "/resume/sardaar_niamotullah-CV.pdf";
                     const link = document.createElement("a");
                     link.href = cvUrl;
                     link.download = "Sardaar_Niamotullah_CV.pdf";

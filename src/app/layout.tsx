@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Bad_Script } from "next/font/google";
 
-import LoadingScreen from './components/LoadingScreen';
+import LoadingScreen from "./components/LoadingScreen";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -23,6 +23,9 @@ const badScript = Bad_Script({
 export const metadata: Metadata = {
   title: "Sardaar Niamotullah",
   description: "Software Enginner",
+  icons: {
+    icon: "/icon/favicon.png",
+  },
 };
 
 export default function RootLayout({
