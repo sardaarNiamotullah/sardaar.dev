@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 export default function LoadingScreen() {
   // ===== SINGLE TIME CONFIGURATION =====
@@ -22,10 +22,10 @@ export default function LoadingScreen() {
     const interval = setInterval(() => {
       setProgress((prev) => {
         const newProgress = prev + progressIncrement;
-        if (newProgress >= 100) {
+        if (newProgress >= 98) {
           clearInterval(interval);
           setTimeout(() => setLoading(false), COMPLETION_DELAY);
-          return 100;
+          return 98;
         }
         return newProgress;
       });
@@ -49,10 +49,14 @@ export default function LoadingScreen() {
             initial={{ width: 0 }}
             animate={{ width: `${progress}%` }}
             transition={{ ease: "easeOut" }}
-            className="h-full bg-[var(--themeColor_2)] rounded-full"
+            // className="h-full bg-[var(--themeColor_2)] rounded-full"
+            className="h-full rounded-full"
+            style={{
+              background: `linear-gradient(260deg, var(--themeColor_2), var(--themeColor_2_light))`,
+            }}
           />
         </div>
-        
+
         <motion.p
           initial={{ opacity: 1 }}
           animate={{ opacity: 1 }}

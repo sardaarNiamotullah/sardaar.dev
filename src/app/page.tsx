@@ -10,7 +10,15 @@ import Footer from "./components/footer";
 
 import Image from "next/image";
 
+// Artificial delay function for test purpose
+// function delay(ms: number) {
+//   return new Promise((resolve) => setTimeout(resolve, ms));
+// }
+
 export default async function Home() {
+  // Add delay second delay before rendering
+  // await delay(1000);
+
   return (
     <main className="relative w-full min-h-screen">
       {/* Background image - fixed to viewport */}
