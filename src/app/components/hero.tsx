@@ -125,7 +125,7 @@ export default function Hero() {
 
           <div className="flex gap-4 justify-center">
             <a
-              href="https://linkedin.com/in/yourprofile"
+              href="https://www.linkedin.com/in/sardaar-niamotullah/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[var(--themeColor_3)] hover:text-[var(--textColor_2)] transition-colors"
@@ -142,7 +142,7 @@ export default function Hero() {
               </svg>
             </a>
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/sardaarNiamotullah"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[var(--themeColor_3)] hover:text-[var(--textColor_2)] transition-colors"
