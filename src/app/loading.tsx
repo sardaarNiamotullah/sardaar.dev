@@ -12,7 +12,6 @@ export default function Loading() {
             }}
           />
         </div>
-
         {/* Loading Text */}
         <p className="text-[var(--textColor_3)] text-sm font-medium">Loading...</p>
       </div>

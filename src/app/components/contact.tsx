@@ -66,7 +66,7 @@ const contactInfo = [
       },
       {
         label: "WhatsApp",
-        value: "+880 1754-298659",
+        value: "+880 1754 298659",
         href: "https://wa.me/qr/MLUDAPGN45MKK1",
         icon: (
           <svg

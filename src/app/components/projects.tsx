@@ -14,7 +14,7 @@ import {
 interface TechStack {
   frontend: string[];
   backend: string[];
-  database: string[];
+  database?: string[];
 }
 
 interface Project {
@@ -81,7 +81,7 @@ const projects: Project[] = [
     description:
       "ToDo is a personal mobile app project built using Flutter and Dart. It helps users manage their daily tasks and assign them to others with ease. The backend is powered by ExpressJS, which handles the API endpoints efficiently, and PostgreSQL is used for storing all task-related data reliably. This setup ensures quick response times and a stable data layer for both solo and collaborative task management.",
     tech: {
-      frontend: ["Flutter", "Dart"],
+      frontend: ["Flutter", "Dart", "Material UI"],
       backend: ["ExpressJS", "NodeJS"],
       database: ["Postgres"],
     },
@@ -89,6 +89,20 @@ const projects: Project[] = [
     demo: "https://youtu.be/clWtqwgM5TE",
     live: "",
     image: "/project-snapshots/todoapp.png",
+  },
+  {
+    title: "AItinerary",
+    description:
+      "AItinerary is an AI-powered travel itinerary builder that generates personalized, weather-aware day-wise travel plans. Users provide a city and a travel date, and the app uses real-time weather data and the Groq API to generate intelligent itineraries. The project showcases full-stack development with Django REST API and a React frontend, emphasizing clean design and effective prompt engineering.",
+    tech: {
+      frontend: ["Vite", "ReactJS", "TailwindCSS", "Motion", "Axios"],
+      backend: ["Django", "Groq API", "Weather API"],
+      // database: [],
+    },
+    github: "https://github.com/sardaarNiamotullah/AItinerary",
+    demo: "https://www.youtube.com/watch?v=QWFeunya20k", // Add a YouTube link here if available
+    live: "https://travel-aitinerary.vercel.app/", // Add the deployed site link here if available
+    image: "/project-snapshots/aitinerary.png", // Replace with your actual image path
   },
 ];
 

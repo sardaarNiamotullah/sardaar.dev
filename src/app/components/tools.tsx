@@ -12,8 +12,8 @@ import {
 const skillCategories = [
   {
     title: "Languages",
-    confident: ["JavaScript", "TypeScript", "Dart"],
-    familiar: ["Java", "Python"],
+    confident: ["TypeScript", "Dart", "Python", "C++"],
+    familiar: ["Java"],
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +31,7 @@ const skillCategories = [
   },
   {
     title: "Frontend",
-    confident: ["ReactJS", "NextJS", "Flutter", "TailwindCSS", "SASS"],
+    confident: ["Flutter", "ReactJS", "NextJS", "TailwindCSS", "SASS", "Vite"],
     familiar: ["Bootstrap", "React Native"],
     icon: (
       <svg
@@ -48,7 +48,7 @@ const skillCategories = [
   },
   {
     title: "Backend",
-    confident: ["ExpressJS", "NodeJS"],
+    confident: ["ExpressJS", "NodeJS", "Django"],
     familiar: ["Spring Boot"],
     icon: (
       <svg
@@ -73,7 +73,7 @@ const skillCategories = [
   },
   {
     title: "Databases",
-    confident: ["PostgreSQL", "MySQL"],
+    confident: ["PostgreSQL", "MySQL", "Supabase"],
     familiar: ["MongoDB"],
     icon: (
       <svg
