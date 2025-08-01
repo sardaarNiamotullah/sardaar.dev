@@ -5,9 +5,10 @@ import Link from "next/link";
 
 export default function Footer() {
   const navLinks = [
-    { name: "About", href: "#about" },
-    { name: "Projects", href: "#projects" },
+    // { name: "About", href: "#about" },
+    { name: "Experience", href: "#experience" },
     { name: "Education", href: "#Education" },
+    { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -17,9 +18,9 @@ export default function Footer() {
       opacity: 1,
       transition: {
         staggerChildren: 0.08,
-        delayChildren: 0.3
-      }
-    }
+        delayChildren: 0.3,
+      },
+    },
   };
 
   const itemVariants = {
@@ -29,9 +30,9 @@ export default function Footer() {
       opacity: 1,
       transition: {
         duration: 0.4,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   return (
@@ -66,7 +67,8 @@ export default function Footer() {
           className="text-center"
         >
           <p className="text-[var(--textColor_3)]/70 text-xs">
-            &copy; {new Date().getFullYear()} Sardaar Niamotullah. All rights reserved.
+            &copy; {new Date().getFullYear()} Sardaar Niamotullah. All rights
+            reserved.
           </p>
         </motion.div>
       </div>

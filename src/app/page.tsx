@@ -2,6 +2,7 @@ import Header from "./components/header";
 import Hero from "./components/hero";
 import About from "./components/about";
 import Education from "./components/education";
+import Experience from "./components/experience";
 import Projects from "./components/projects";
 import Tools from "./components/tools";
 import Certifications from "./components/certifications";
@@ -40,6 +41,7 @@ export default async function Home() {
         <Hero />
         <About />
         <Education />
+        <Experience />
         <Projects />
         <Certifications />
         <Tools />

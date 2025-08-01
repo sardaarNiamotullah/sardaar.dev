@@ -9,7 +9,8 @@ export default function Header() {
   const buttonRef = useRef<HTMLButtonElement>(null);
 
   const navLinks = [
-    { name: "About", href: "#about" },
+    // { name: "About", href: "#about" },
+    { name: "Experience", href: "#experience" },
     { name: "Education", href: "#education" },
     { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
@@ -38,12 +39,12 @@ export default function Header() {
   // Animation variants for hamburger lines
   const topLineVariants = {
     open: { rotate: 45, y: 3, originX: 0.5, originY: 0.5 },
-    closed: { rotate: 0, y: 0, originX: 0.5, originY: 0.5 }
+    closed: { rotate: 0, y: 0, originX: 0.5, originY: 0.5 },
   };
 
   const bottomLineVariants = {
     open: { rotate: -45, y: -3, originX: 0.5, originY: 0.5 },
-    closed: { rotate: 0, y: 0, originX: 0.5, originY: 0.5 }
+    closed: { rotate: 0, y: 0, originX: 0.5, originY: 0.5 },
   };
 
   return (
