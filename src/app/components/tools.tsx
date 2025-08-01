@@ -12,7 +12,7 @@ import {
 const skillCategories = [
   {
     title: "Languages",
-    confident: ["TypeScript", "Dart", "Python", "C++"],
+    confident: ["C/C++", "JS/TS/NodeJS", "Dart", "Python"],
     familiar: ["Java"],
     icon: (
       <svg

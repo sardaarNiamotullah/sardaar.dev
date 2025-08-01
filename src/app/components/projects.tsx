@@ -11,16 +11,10 @@ import {
   Divider,
 } from "../utils/animations";
 
-interface TechStack {
-  frontend: string[];
-  backend: string[];
-  database?: string[];
-}
-
 interface Project {
   title: string;
   description: string;
-  tech: TechStack;
+  tech: string[]; // Changed from TechStack object to simple array
   github?: string;
   demo?: string;
   live?: string;
@@ -32,77 +26,93 @@ const projects: Project[] = [
     title: "Hajj Aday",
     description:
       "Hajj Aday is a freelance project I developed for a travel agency in Bangladesh that assists pilgrims throughout their Hajj journey. The app provides a smooth and user-friendly interface. Built with Next.js, it leverages features like optimized image loading, loading screen, and other nextjs features to enhance performance.",
-    tech: {
-      frontend: ["NextJS", "ReactJS"],
-      backend: ["ExpressJS", "NodeJS"],
-      database: ["Postgres"],
-    },
+    tech: ["NextJS", "ReactJS", "ExpressJS", "NodeJS", "Postgres"],
     github: "",
     demo: "",
     live: "https://www.hajjaday.com/",
     image: "/project-snapshots/hajjaday2.png",
   },
   {
-    title: "AI ChatBot",
+    title: "Ai Tutor",
+    description:
+      "Ai Tutor is a Retrieval-Augmented Generation (RAG) system designed to answer user queries by retrieving relevant information from a knowledge base built on document chunks. It supports semantic search over PDF content and generates contextually accurate responses.",
+    tech: [
+      "RAG",
+      "Langchain",
+      "LLM",
+      "Ollama",
+      "LLaMA 3.2",
+      "Vector Database",
+      "Pgvector",
+      "Embedding",
+      "Cosine Similarity",
+      "Python",
+      "Django",
+    ],
+    github: "https://github.com/sardaarNiamotullah/Ai_Tutor",
+    demo: "",
+    live: "",
+    image: "/project-snapshots/ai_tutor.png",
+  },
+  {
+    title: "Ai ChatBot",
     description:
       "A full-stack AI-powered chatbot platform that serves as a virtual customer service representative. Built with Ollama-Llama3.2 for intelligent responses, it features secure Google OAuth2.0 authentication, real-time chat interface, and persistent conversation storage.",
-    tech: {
-      frontend: ["NextJS", "ReactJS"],
-      backend: [
-        "Ollama-Llama3.2",
-        "ExpressJS",
-        "NodeJS",
-        "PassportJS",
-        "OAuth2",
-      ],
-      database: ["Postgres", "Prisma"],
-    },
+    tech: [
+      "NextJS",
+      "ReactJS",
+      "Ollama-Llama3.2",
+      "ExpressJS",
+      "NodeJS",
+      "PassportJS",
+      "OAuth2",
+      "Postgres",
+      "Prisma",
+    ],
     github: "https://github.com/sardaarNiamotullah/ai_chatbot",
-    demo: "https://youtu.be/aXXc6IYGcr4",
+    demo: "",
     live: "",
     image: "/project-snapshots/chatbot.png",
   },
   {
-    title: "Instant Chat App",
+    title: "Team_Task_Management-MobileApp",
     description:
-      "Instant Chat App is one of my favorite pet projects where I explored real-time communication using WebSocket (Socket.IO). It’s a fully functional chat application that supports instant messaging and stores all conversations in a PostgreSQL database via Prisma ORM. The backend is built with ExpressJS and includes user authentication using OAuth2 and PassportJS for secure access. This setup ensures both real-time responsiveness and persistent message history across sessions.",
-    tech: {
-      frontend: ["NextJS", "ReactJS"],
-      backend: ["ExpressJS", "NodeJS", "Socket.IO", "PassportJS", "OAuth2"],
-      database: ["Postgres", "Prisma"],
-    },
-    github: "https://github.com/sardaarNiamotullah/chatApp",
-    demo: "https://youtu.be/S1g5dhajORE",
+      "Team_Task_Management-MobileApp is a personal mobile app project built using Flutter and Dart. It helps users manage their daily tasks and assign them to others with ease. The backend is powered by ExpressJS, which handles the API endpoints efficiently, and PostgreSQL is used for storing all task-related data reliably. This setup ensures quick response times and a stable data layer for both solo and collaborative task management.",
+    tech: ["Flutter", "Dart", "Material UI", "ExpressJS", "NodeJS", "Postgres"],
+    github: "https://github.com/sardaarNiamotullah/Team_Task_Management-MobileApp",
+    demo: "",
     live: "",
-    image: "/project-snapshots/chatapp.png",
+    image: "/project-snapshots/teamtaskmanager.png",
   },
   {
-    title: "ToDo: Mobile App",
+    title: "Instant Chat App",
     description:
-      "ToDo is a personal mobile app project built using Flutter and Dart. It helps users manage their daily tasks and assign them to others with ease. The backend is powered by ExpressJS, which handles the API endpoints efficiently, and PostgreSQL is used for storing all task-related data reliably. This setup ensures quick response times and a stable data layer for both solo and collaborative task management.",
-    tech: {
-      frontend: ["Flutter", "Dart", "Material UI"],
-      backend: ["ExpressJS", "NodeJS"],
-      database: ["Postgres"],
-    },
-    github: "https://github.com/sardaarNiamotullah/todo_MobileApp",
-    demo: "https://youtu.be/clWtqwgM5TE",
+      "Instant Chat App is one of my favorite pet projects where I explored real-time communication using WebSocket (Socket.IO). It's a fully functional chat application that supports instant messaging and stores all conversations in a PostgreSQL database via Prisma ORM. The backend is built with ExpressJS and includes user authentication using OAuth2 and PassportJS for secure access. This setup ensures both real-time responsiveness and persistent message history across sessions.",
+    tech: [
+      "NextJS",
+      "ReactJS",
+      "ExpressJS",
+      "NodeJS",
+      "Socket.IO",
+      "PassportJS",
+      "OAuth2",
+      "Postgres",
+      "Prisma",
+    ],
+    github: "https://github.com/sardaarNiamotullah/chatApp",
+    demo: "",
     live: "",
-    image: "/project-snapshots/todoapp.png",
+    image: "/project-snapshots/chatapp.png",
   },
   {
     title: "AItinerary",
     description:
       "AItinerary is an AI-powered travel itinerary builder that generates personalized, weather-aware day-wise travel plans. Users provide a city and a travel date, and the app uses real-time weather data and the Groq API to generate intelligent itineraries. The project showcases full-stack development with Django REST API and a React frontend, emphasizing clean design and effective prompt engineering.",
-    tech: {
-      frontend: ["Vite", "ReactJS", "TailwindCSS", "Motion", "Axios"],
-      backend: ["Django", "Groq API", "Weather API"],
-      // database: [],
-    },
+    tech: ["Vite", "ReactJS", "TailwindCSS", "Motion", "Axios", "Django", "Groq API", "Weather API"],
     github: "https://github.com/sardaarNiamotullah/AItinerary",
-    demo: "https://www.youtube.com/watch?v=QWFeunya20k", // Add a YouTube link here if available
-    live: "https://travel-aitinerary.vercel.app/", // Add the deployed site link here if available
-    image: "/project-snapshots/aitinerary.png", // Replace with your actual image path
+    demo: "",
+    live: "https://travel-aitinerary.vercel.app/",
+    image: "/project-snapshots/aitinerary.png",
   },
 ];
 
@@ -227,10 +237,6 @@ const renderActionButtons = (project: Project, isMobile: boolean = false) => {
 };
 
 const renderMobileView = (project: Project, index: number) => {
-  // Determine the link to use: demo -> live -> github
-  const link = project.demo || project.live || project.github || "#";
-  const isLinkDisabled = link === "#";
-
   return (
     <motion.div
       key={index}
@@ -253,25 +259,6 @@ const renderMobileView = (project: Project, index: number) => {
           loading={index > 0 ? "lazy" : undefined}
         />
         <div className="absolute inset-0 bg-[var(--themeColor_2)]/10"></div>
-        <Link
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`absolute inset-0 flex items-center justify-center ${
-            isLinkDisabled ? "pointer-events-none opacity-50" : ""
-          }`}
-        >
-          <motion.svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
-            viewBox="0 0 24 24"
-            fill="rgba(255,255,255,0.8)"
-            whileHover={{ scale: isLinkDisabled ? 1 : 1.1 }}
-          >
-            <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
-          </motion.svg>
-        </Link>
       </motion.div>
       <motion.h3
         variants={itemVariants}
@@ -291,39 +278,34 @@ const renderMobileView = (project: Project, index: number) => {
         {renderActionButtons(project, true)}
       </motion.div>
 
-      <motion.div variants={containerVariants} className="space-y-4 mt-6">
-        {Object.entries(project.tech).map(([category, items]) => (
-          <motion.div key={category} variants={itemVariants}>
-            <h4 className="text-[var(--textColor_3)] text-sm font-medium uppercase tracking-wider mb-2 capitalize">
-              {category}
-            </h4>
-            <motion.div
-              variants={containerVariants}
-              className="flex flex-wrap gap-2"
-            >
-              {(items as string[]).map((tech, i) => (
-                <motion.span
-                  key={`${category}-${i}`}
-                  variants={itemVariants}
-                  whileHover={{ scale: 1.05 }}
-                  className="text-xs px-3 py-1 rounded-lg bg-[var(--themeColor_2)]/10 text-[var(--textColor_3)] border border-[var(--themeColor_2)]/30 hover:bg-[var(--themeColor_2)]/20 transition-all"
-                >
-                  {tech}
-                </motion.span>
-              ))}
-            </motion.div>
+      {/* Tech Stack Section */}
+      <motion.div variants={containerVariants} className="mt-6">
+        <motion.div variants={itemVariants}>
+          <h4 className="text-[var(--textColor_3)] text-sm font-medium uppercase tracking-wider mb-2">
+            Tech Stack
+          </h4>
+          <motion.div
+            variants={containerVariants}
+            className="flex flex-wrap gap-2"
+          >
+            {project.tech.map((tech, i) => (
+              <motion.span
+                key={i}
+                variants={itemVariants}
+                whileHover={{ scale: 1.05 }}
+                className="text-xs px-3 py-1 rounded-lg bg-[var(--themeColor_2)]/10 text-[var(--textColor_3)] border border-[var(--themeColor_2)]/30 hover:bg-[var(--themeColor_2)]/20 transition-all"
+              >
+                {tech}
+              </motion.span>
+            ))}
           </motion.div>
-        ))}
+        </motion.div>
       </motion.div>
     </motion.div>
   );
 };
 
 const renderDesktopView = (project: Project, index: number) => {
-  // Determine the link to use: demo -> live -> github
-  const link = project.demo || project.live || project.github || "#";
-  const isLinkDisabled = link === "#";
-
   return (
     <motion.div
       key={index}
@@ -350,25 +332,6 @@ const renderDesktopView = (project: Project, index: number) => {
             loading={index > 0 ? "lazy" : undefined}
           />
           <div className="absolute inset-0 bg-[var(--themeColor_2)]/10"></div>
-          <Link
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`absolute inset-0 flex items-center justify-center ${
-              isLinkDisabled ? "pointer-events-none opacity-50" : ""
-            }`}
-          >
-            <motion.svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="30"
-              height="30"
-              viewBox="0 0 24 24"
-              fill="rgba(255,255,255,0.8)"
-              whileHover={{ scale: isLinkDisabled ? 1 : 1.1 }}
-            >
-              <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
-            </motion.svg>
-          </Link>
         </motion.div>
         <motion.div variants={itemVariants}>
           {renderActionButtons(project)}
@@ -387,29 +350,29 @@ const renderDesktopView = (project: Project, index: number) => {
         >
           {project.description}
         </motion.p>
-        <motion.div variants={containerVariants} className="space-y-4">
-          {Object.entries(project.tech).map(([category, items]) => (
-            <motion.div key={category} variants={itemVariants}>
-              <h4 className="text-[var(--textColor_3)] text-sm font-medium uppercase tracking-wider mb-2 capitalize">
-                {category}
-              </h4>
-              <motion.div
-                variants={containerVariants}
-                className="flex flex-wrap gap-2"
-              >
-                {(items as string[]).map((tech, i) => (
-                  <motion.span
-                    key={`${category}-${i}`}
-                    variants={itemVariants}
-                    whileHover={{ scale: 1.05 }}
-                    className="text-xs px-3 py-1 rounded-lg bg-[var(--themeColor_2)]/10 text-[var(--textColor_3)] border border-[var(--themeColor_2)]/30 hover:bg-[var(--themeColor_2)]/20 transition-all"
-                  >
-                    {tech}
-                  </motion.span>
-                ))}
-              </motion.div>
+        
+        {/* Tech Stack Section */}
+        <motion.div variants={containerVariants}>
+          <motion.div variants={itemVariants}>
+            <h4 className="text-[var(--textColor_3)] text-sm font-medium uppercase tracking-wider mb-2">
+              Tech Stack
+            </h4>
+            <motion.div
+              variants={containerVariants}
+              className="flex flex-wrap gap-2"
+            >
+              {project.tech.map((tech, i) => (
+                <motion.span
+                  key={i}
+                  variants={itemVariants}
+                  whileHover={{ scale: 1.05 }}
+                  className="text-xs px-3 py-1 rounded-lg bg-[var(--themeColor_2)]/10 text-[var(--textColor_3)] border border-[var(--themeColor_2)]/30 hover:bg-[var(--themeColor_2)]/20 transition-all"
+                >
+                  {tech}
+                </motion.span>
+              ))}
             </motion.div>
-          ))}
+          </motion.div>
         </motion.div>
       </motion.div>
     </motion.div>
