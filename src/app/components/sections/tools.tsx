@@ -7,7 +7,7 @@ import {
   itemVariants,
   iconVariants,
   Divider,
-} from "../utils/animations";
+} from "../../utils/animations";
 
 const skillCategories = [
   {

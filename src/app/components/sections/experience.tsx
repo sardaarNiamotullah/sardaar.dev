@@ -7,7 +7,7 @@ import {
   itemVariants,
   cardVariants,
   Divider,
-} from "../utils/animations";
+} from "../../utils/animations";
 
 export default function Experience() {
   const getDurationInMonths = (startDate: string): string => {

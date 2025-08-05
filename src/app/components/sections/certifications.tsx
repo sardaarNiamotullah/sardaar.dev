@@ -8,7 +8,7 @@ import {
   itemVariants,
   imageVariants,
   Divider,
-} from "../utils/animations";
+} from "../../utils/animations";
 
 interface Certification {
   title: string;

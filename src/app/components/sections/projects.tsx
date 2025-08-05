@@ -9,7 +9,7 @@ import {
   itemVariants,
   imageVariants,
   Divider,
-} from "../utils/animations";
+} from "../../utils/animations";
 
 interface Project {
   title: string;

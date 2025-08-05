@@ -7,7 +7,7 @@ import {
   itemVariants,
   cardVariants,
   Divider,
-} from "../utils/animations";
+} from "../../utils/animations";
 
 const contactInfo = [
   {

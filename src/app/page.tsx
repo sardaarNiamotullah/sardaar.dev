@@ -1,13 +1,13 @@
-import Header from "./components/header";
-import Hero from "./components/hero";
-import About from "./components/about";
-import Education from "./components/education";
-import Experience from "./components/experience";
-import Projects from "./components/projects";
-import Tools from "./components/tools";
-import Certifications from "./components/certifications";
-import Contact from "./components/contact";
-import Footer from "./components/footer";
+import Header from "./components/sections/header";
+import Hero from "./components/sections/hero";
+import About from "./components/sections/about";
+import Education from "./components/sections/education";
+import Experience from "./components/sections/experience";
+import Projects from "./components/sections/projects";
+import Tools from "./components/sections/tools";
+import Certifications from "./components/sections/certifications";
+import Contact from "./components/sections/contact";
+import Footer from "./components/sections/footer";
 
 import Image from "next/image";
 
