@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-const phrases = ["Full Stack Software Engineer", "Flutter, NextJS, Django, ExpressJS", "C/C++, Dart, Python, NodeJS, JS/TS", "PostgreSQL, Vector Database, Pgvector"];
+const phrases = ['Full Stack Software Engineer', 'Flutter, React, Node, Django, SQL'];
 
 export default function Hero() {
   const [typingText, setTypingText] = useState("");
@@ -102,10 +102,10 @@ export default function Hero() {
               whileTap={{ scale: 0.95 }}
               className="bg-[var(--themeColor_2)] text-[var(--textColor_4)] px-3 py-2 rounded hover:bg-[var(--themeColor_2_light)] transition-colors cursor-pointer text-sm"
               onClick={() => {
-                const cvUrl = "/resume/Sardaar_Niamotullah-CV.pdf";
+                const cvUrl = "/resume/sardaar_niamotullah_resume.pdf";
                 const link = document.createElement("a");
                 link.href = cvUrl;
-                link.download = "Sardaar_Niamotullah_CV.pdf";
+                link.download = "sardaar_niamotullah_resume.pdf";
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
@@ -219,10 +219,10 @@ export default function Hero() {
                   whileTap={{ scale: 0.95 }}
                   className="bg-[var(--themeColor_2)] text-[var(--textColor_4)] px-4 py-2 rounded hover:bg-[var(--themeColor_2_light)] transition-colors cursor-pointer text-sm"
                   onClick={() => {
-                    const cvUrl = "/resume/Sardaar_Niamotullah-CV.pdf";
+                    const cvUrl = "/resume/sardaar_niamotullah_resume.pdf";
                     const link = document.createElement("a");
                     link.href = cvUrl;
-                    link.download = "Sardaar_Niamotullah_CV.pdf";
+                    link.download = "sardaar_niamotullah_resume.pdf";
                     document.body.appendChild(link);
                     link.click();
                     document.body.removeChild(link);
