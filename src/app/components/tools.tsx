@@ -73,7 +73,7 @@ const skillCategories = [
   },
   {
     title: "Databases",
-    confident: ["PostgreSQL", "MySQL", "Supabase"],
+    confident: ["PostgreSQL", "MySQL", "Supabase", "Firebase", "Vector", "Pgvector"],
     familiar: ["MongoDB"],
     icon: (
       <svg

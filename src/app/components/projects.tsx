@@ -14,7 +14,7 @@ import {
 interface Project {
   title: string;
   description: string;
-  tech: string[]; // Changed from TechStack object to simple array
+  tech: string[];
   github?: string;
   demo?: string;
   live?: string;
@@ -23,14 +23,24 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Hajj Aday",
+    title: "Dllalna",
     description:
-      "Hajj Aday is a freelance project I developed for a travel agency in Bangladesh that assists pilgrims throughout their Hajj journey. The app provides a smooth and user-friendly interface. Built with Next.js, it leverages features like optimized image loading, loading screen, and other nextjs features to enhance performance.",
-    tech: ["NextJS", "ReactJS", "ExpressJS", "NodeJS", "Postgres"],
+      "Dllalna is a real estate app where users can create accounts as buyers, sellers, or brokers. The platform allows users to buy properties, publish ads for their own properties, and even hire brokers seamlessly.",
+    tech: ["Flutter", "Dart", "Supabase", "GetX"],
     github: "",
     demo: "",
-    live: "https://www.hajjaday.com/",
-    image: "/project-snapshots/hajjaday2.png",
+    live: "",
+    image: "/project-snapshots/dllalna.png",
+  },
+  {
+    title: "Routivise",
+    description:
+      "Routivise is a fitness app that keeps track of users' daily goals, exercises, and eating habits. It also provides personalized suggestions from a built-in AI to help users stay consistent with their fitness journey.",
+    tech: ["Flutter", "Dart", "Generative AI", "Supabase", "GetX"],
+    github: "",
+    demo: "",
+    live: "",
+    image: "/project-snapshots/routivise.png",
   },
   {
     title: "Ai Tutor",
@@ -53,6 +63,16 @@ const projects: Project[] = [
     demo: "",
     live: "",
     image: "/project-snapshots/ai_tutor.png",
+  },
+  {
+    title: "Hajj Aday",
+    description:
+      "Hajj Aday is a freelance project I developed for a travel agency in Bangladesh that assists pilgrims throughout their Hajj journey. The app provides a smooth and user-friendly interface. Built with Next.js, it leverages features like optimized image loading, loading screen, and other nextjs features to enhance performance.",
+    tech: ["NextJS", "ReactJS", "ExpressJS", "NodeJS", "Postgres"],
+    github: "",
+    demo: "",
+    live: "https://www.hajjaday.com/",
+    image: "/project-snapshots/hajjaday2.png",
   },
   {
     title: "Ai ChatBot",
@@ -79,7 +99,8 @@ const projects: Project[] = [
     description:
       "Team_Task_Management-MobileApp is a personal mobile app project built using Flutter and Dart. It helps users manage their daily tasks and assign them to others with ease. The backend is powered by ExpressJS, which handles the API endpoints efficiently, and PostgreSQL is used for storing all task-related data reliably. This setup ensures quick response times and a stable data layer for both solo and collaborative task management.",
     tech: ["Flutter", "Dart", "Material UI", "ExpressJS", "NodeJS", "Postgres"],
-    github: "https://github.com/sardaarNiamotullah/Team_Task_Management-MobileApp",
+    github:
+      "https://github.com/sardaarNiamotullah/Team_Task_Management-MobileApp",
     demo: "",
     live: "",
     image: "/project-snapshots/teamtaskmanager.png",
@@ -108,7 +129,16 @@ const projects: Project[] = [
     title: "AItinerary",
     description:
       "AItinerary is an AI-powered travel itinerary builder that generates personalized, weather-aware day-wise travel plans. Users provide a city and a travel date, and the app uses real-time weather data and the Groq API to generate intelligent itineraries. The project showcases full-stack development with Django REST API and a React frontend, emphasizing clean design and effective prompt engineering.",
-    tech: ["Vite", "ReactJS", "TailwindCSS", "Motion", "Axios", "Django", "Groq API", "Weather API"],
+    tech: [
+      "Vite",
+      "ReactJS",
+      "TailwindCSS",
+      "Motion",
+      "Axios",
+      "Django",
+      "Groq API",
+      "Weather API",
+    ],
     github: "https://github.com/sardaarNiamotullah/AItinerary",
     demo: "",
     live: "https://travel-aitinerary.vercel.app/",
@@ -119,7 +149,49 @@ const projects: Project[] = [
 const renderActionButtons = (project: Project, isMobile: boolean = false) => {
   const hasGithub = !!project.github;
   const hasDemo = !!project.demo;
+  const hasLive = !!project.live;
+  const hasAnyLink = hasGithub || hasDemo || hasLive;
   const showBothInRow = hasGithub && hasDemo;
+
+  // If no links are available, show "Client's Project"
+  if (!hasAnyLink) {
+    return (
+      <motion.div
+        variants={containerVariants}
+        className={`flex flex-col gap-3 ${isMobile ? "w-full" : "w-full"}`}
+      >
+        <motion.div
+          variants={itemVariants}
+          className="flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-[var(--themeColor_2)]/0 border border-[var(--themeColor_2)]/30 text-[var(--textColor_3)] w-full"
+        >
+          {/* Updated Lock Icon SVG */}
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M5.25 10.0546V8C5.25 4.27208 8.27208 1.25 12 1.25C15.7279 1.25 18.75 4.27208 18.75 8V10.0546C19.8648 10.1379 20.5907 10.348 21.1213 10.8787C22 11.7574 22 13.1716 22 16C22 18.8284 22 20.2426 21.1213 21.1213C20.2426 22 18.8284 22 16 22H8C5.17157 22 3.75736 22 2.87868 21.1213C2 20.2426 2 18.8284 2 16C2 13.1716 2 11.7574 2.87868 10.8787C3.40931 10.348 4.13525 10.1379 5.25 10.0546ZM6.75 8C6.75 5.10051 9.10051 2.75 12 2.75C14.8995 2.75 17.25 5.10051 17.25 8V10.0036C16.867 10 16.4515 10 16 10H8C7.54849 10 7.13301 10 6.75 10.0036V8Z"
+                fill="white"
+              />
+            </g>
+          </svg>
+          <span>Client&apos;s Project</span>
+        </motion.div>
+      </motion.div>
+    );
+  }
 
   return (
     <motion.div
@@ -141,7 +213,7 @@ const renderActionButtons = (project: Project, isMobile: boolean = false) => {
                 className={showBothInRow ? "" : "w-full"}
               >
                 <Link
-                  href={project.github!}
+                  href={project.github || ""}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--themeColor_2)]/0 border border-[var(--themeColor_2)]/30 text-[var(--textColor_3)] hover:bg-[var(--themeColor_2)]/0 transition-all ${
@@ -162,14 +234,14 @@ const renderActionButtons = (project: Project, isMobile: boolean = false) => {
               </motion.div>
             )}
 
-            {hasDemo && (
+            {hasDemo && project.demo && (
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className={showBothInRow ? "" : "w-full"}
               >
                 <Link
-                  href={project.demo!}
+                  href={project.demo}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--themeColor_2)]/0 border border-[var(--themeColor_2)]/30 text-[var(--textColor_3)] hover:bg-[var(--themeColor_2)]/0 transition-all ${
@@ -195,7 +267,7 @@ const renderActionButtons = (project: Project, isMobile: boolean = false) => {
       )}
 
       {/* Bottom Row - Live Site */}
-      {project.live && (
+      {hasLive && project.live && (
         <motion.div
           variants={itemVariants}
           whileHover={{ scale: 1.05 }}
@@ -350,7 +422,7 @@ const renderDesktopView = (project: Project, index: number) => {
         >
           {project.description}
         </motion.p>
-        
+
         {/* Tech Stack Section */}
         <motion.div variants={containerVariants}>
           <motion.div variants={itemVariants}>
