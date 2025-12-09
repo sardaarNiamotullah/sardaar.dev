@@ -5,7 +5,11 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-const phrases = ['Full Stack Software Engineer', 'Flutter, React, Node, Django, SQL'];
+const phrases = [
+  "Full Stack Software Engineer",
+  "Dart, JavaScript, TypeScript",
+  "Flutter, ReactJS, NextJS, NestJS",
+];
 
 export default function Hero() {
   const [typingText, setTypingText] = useState("");
