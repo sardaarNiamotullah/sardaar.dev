@@ -163,7 +163,8 @@ export default function Contact() {
             <motion.div
               key={index}
               variants={cardVariants}
-              className="w-full bg-[var(--themeColor_1)]/10 backdrop-blur-sm border border-[var(--themeColor_2)]/20 rounded-xl p-8 hover:border-[var(--themeColor_2)]/30 transition-all"
+              // className="w-full bg-[var(--themeColor_1)]/10 backdrop-blur-sm border border-[var(--themeColor_2)]/20 rounded-xl p-8 hover:border-[var(--themeColor_2)]/30 transition-all"
+              className="w-full p-8 transition-all"
             >
               <motion.h3
                 variants={itemVariants}
@@ -178,7 +179,7 @@ export default function Contact() {
                     key={itemIndex}
                     variants={itemVariants}
                     whileHover={{ y: 0 }}
-                    className="flex items-center gap-4 p-4 rounded-xl bg-[var(--themeColor_1)]/0 border border-[var(--themeColor_2)]/0 hover:bg-[var(--themeColor_2)]/10 transition-all"
+                    className="flex items-center gap-4 p-4 rounded-xl bg-[var(--themeColor_1)]/0 border border-[var(--themeColor_2)]/0 hover:bg-[var(--themeColor_2)]/1 transition-all"
                   >
                     <Link
                       href={item.href}
@@ -218,7 +219,8 @@ export default function Contact() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={cardVariants}
-          className="w-full bg-[var(--themeColor_1)]/10 backdrop-blur-sm border border-[var(--themeColor_2)]/20 rounded-xl p-8 hover:border-[var(--themeColor_2)]/30 transition-all"
+          // className="w-full bg-[var(--themeColor_1)]/10 backdrop-blur-sm border border-[var(--themeColor_2)]/20 rounded-xl p-8 hover:border-[var(--themeColor_2)]/30 transition-all"
+          className="w-full p-8 transition-all"
         >
           <motion.h3
             variants={itemVariants}
@@ -233,7 +235,7 @@ export default function Contact() {
                 key={index}
                 variants={itemVariants}
                 whileHover={{ y: 0 }}
-                className="flex items-center gap-4 p-4 rounded-xl bg-[var(--themeColor_1)]/0 border border-[var(--themeColor_2)]/0 hover:bg-[var(--themeColor_2)]/10 transition-all"
+                className="flex items-center gap-4 p-4 rounded-xl bg-[var(--themeColor_1)]/0 border border-[var(--themeColor_2)]/0 hover:bg-[var(--themeColor_2)]/1 transition-all"
               >
                 <Link
                   href={social.url}

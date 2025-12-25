@@ -65,16 +65,6 @@ const projects: Project[] = [
     image: "/project-snapshots/ai_tutor.png",
   },
   {
-    title: "Hajj Aday",
-    description:
-      "Hajj Aday is a freelance project I developed for a travel agency in Bangladesh that assists pilgrims throughout their Hajj journey. The app provides a smooth and user-friendly interface. Built with Next.js, it leverages features like optimized image loading, loading screen, and other nextjs features to enhance performance.",
-    tech: ["NextJS", "ReactJS", "ExpressJS", "NodeJS", "Postgres"],
-    github: "",
-    demo: "",
-    live: "https://www.hajjaday.com/",
-    image: "/project-snapshots/hajjaday2.png",
-  },
-  {
     title: "Ai ChatBot",
     description:
       "A full-stack AI-powered chatbot platform that serves as a virtual customer service representative. Built with Ollama-Llama3.2 for intelligent responses, it features secure Google OAuth2.0 authentication, real-time chat interface, and persistent conversation storage.",
@@ -141,7 +131,7 @@ const projects: Project[] = [
     ],
     github: "https://github.com/sardaarNiamotullah/AItinerary",
     demo: "",
-    live: "https://travel-aitinerary.vercel.app/",
+    // live: "https://travel-aitinerary.vercel.app/",
     image: "/project-snapshots/aitinerary.png",
   },
 ];
@@ -316,7 +306,8 @@ const renderMobileView = (project: Project, index: number) => {
       whileInView="visible"
       viewport={{ once: true }}
       variants={containerVariants}
-      className="w-full bg-[var(--themeColor_1)]/10 backdrop-blur-sm border border-[var(--themeColor_2)]/20 rounded-xl p-8 hover:border-[var(--themeColor_2)]/30 transition-all"
+      // className="w-full bg-[var(--themeColor_1)]/10 backdrop-blur-sm border border-[var(--themeColor_2)]/20 rounded-xl p-8 hover:border-[var(--themeColor_2)]/30 transition-all"
+      className="w-full p-8 transition-all"
     >
       <motion.div
         variants={imageVariants}
@@ -365,7 +356,7 @@ const renderMobileView = (project: Project, index: number) => {
                 key={i}
                 variants={itemVariants}
                 whileHover={{ scale: 1.05 }}
-                className="text-xs px-3 py-1 rounded-lg bg-[var(--themeColor_2)]/10 text-[var(--textColor_3)] border border-[var(--themeColor_2)]/30 hover:bg-[var(--themeColor_2)]/20 transition-all"
+                className="text-sm px-4 py-2 rounded-lg bg-[var(--themeColor_1)] text-[var(--textColor_3)] border border-[var(--themeColor_2)]/30 hover:border-[var(--themeColor_2)]/50 transition-all"
               >
                 {tech}
               </motion.span>
@@ -385,7 +376,8 @@ const renderDesktopView = (project: Project, index: number) => {
       whileInView="visible"
       viewport={{ once: true }}
       variants={containerVariants}
-      className="w-full flex flex-row items-start gap-8 bg-[var(--themeColor_1)]/10 backdrop-blur-sm border border-[var(--themeColor_2)]/20 rounded-xl p-8 hover:border-[var(--themeColor_2)]/30 transition-all"
+      // className="w-full flex flex-row items-start gap-8 bg-[var(--themeColor_1)]/10 backdrop-blur-sm border border-[var(--themeColor_2)]/20 rounded-xl p-8 hover:border-[var(--themeColor_2)]/30 transition-all"
+      className="w-full flex flex-row items-start gap-8 p-8 transition-all"
     >
       <motion.div
         variants={containerVariants}
@@ -438,7 +430,8 @@ const renderDesktopView = (project: Project, index: number) => {
                   key={i}
                   variants={itemVariants}
                   whileHover={{ scale: 1.05 }}
-                  className="text-xs px-3 py-1 rounded-lg bg-[var(--themeColor_2)]/10 text-[var(--textColor_3)] border border-[var(--themeColor_2)]/30 hover:bg-[var(--themeColor_2)]/20 transition-all"
+                  // className="text-xs px-3 py-1 rounded-lg bg-[var(--themeColor_2)]/10 text-[var(--textColor_3)] border border-[var(--themeColor_2)]/30 hover:bg-[var(--themeColor_2)]/20 transition-all"
+                  className="text-sm px-4 py-2 rounded-lg bg-[var(--themeColor_1)] text-[var(--textColor_3)] border border-[var(--themeColor_2)]/30 hover:border-[var(--themeColor_2)]/50 transition-all"
                 >
                   {tech}
                 </motion.span>

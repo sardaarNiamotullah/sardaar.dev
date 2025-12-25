@@ -66,22 +66,6 @@ const certifications: Certification[] = [
     ],
   },
   {
-    title: "Master Spring Boot 3 & Spring Framework 6 with Java",
-    organization: "Udemy",
-    year: "2024",
-    certificateUrl:
-      "https://www.udemy.com/certificate/UC-49b6390e-2183-4d49-96f9-3116f4669dcb/",
-    description:
-      "Developed strong understanding of Java-based backend systems using Spring Boot and Spring Framework. Explored REST APIs, Hibernate ORM.",
-    image: "/certifications/springboot.jpg",
-    highlights: [
-      "Spring Boot",
-      "Java",
-      "Spring MVC",
-      "Hibernate",
-    ],
-  },
-  {
     title: "The Complete 2023 Web Development Bootcamp",
     organization: "Udemy",
     year: "2023",
@@ -128,7 +112,8 @@ const renderMobileView = (certification: Certification, index: number) => (
     whileInView="visible"
     viewport={{ once: true }}
     variants={containerVariants}
-    className="w-full bg-[var(--themeColor_1)]/10 backdrop-blur-sm border border-[var(--themeColor_2)]/20 rounded-xl p-8 hover:border-[var(--themeColor_2)]/30 transition-all"
+    // className="w-full bg-[var(--themeColor_1)]/10 backdrop-blur-sm border border-[var(--themeColor_2)]/20 rounded-xl p-8 hover:border-[var(--themeColor_2)]/30 transition-all"
+    className="w-full p-8 transition-all"
   >
     <motion.h3
       variants={itemVariants}
@@ -177,7 +162,7 @@ const renderMobileView = (certification: Certification, index: number) => (
     </motion.p>
 
     <motion.div variants={itemVariants} className="mb-6">
-      <h4 className="text-[var(--textColor_3)] text-sm font-medium uppercase tracking-wider mb-2">
+      <h4 className="text-[var(--textColor_3)] text-sm font-medium uppercase tracking-wider mb-2.5">
         Highlights
       </h4>
       <motion.div variants={containerVariants} className="flex flex-wrap gap-2">
@@ -186,7 +171,7 @@ const renderMobileView = (certification: Certification, index: number) => (
             key={`highlight-${i}`}
             variants={itemVariants}
             whileHover={{ scale: 1.05 }}
-            className="text-xs px-3 py-1 rounded-lg bg-[var(--themeColor_2)]/10 text-[var(--textColor_3)] border border-[var(--themeColor_2)]/30 hover:bg-[var(--themeColor_2)]/20 transition-all"
+            className="text-sm px-4 py-2 rounded-lg bg-[var(--themeColor_1)] text-[var(--textColor_3)] border border-[var(--themeColor_2)]/30 hover:border-[var(--themeColor_2)]/50 transition-all"
           >
             {skill}
           </motion.span>
@@ -203,7 +188,8 @@ const renderDesktopView = (certification: Certification, index: number) => (
     whileInView="visible"
     viewport={{ once: true }}
     variants={containerVariants}
-    className="w-full flex flex-row items-start gap-8 bg-[var(--themeColor_1)]/10 backdrop-blur-sm border border-[var(--themeColor_2)]/20 rounded-xl p-8 hover:border-[var(--themeColor_2)]/30 transition-all"
+    // className="w-full flex flex-row items-start gap-8 bg-[var(--themeColor_1)]/10 backdrop-blur-sm border border-[var(--themeColor_2)]/20 rounded-xl p-8 hover:border-[var(--themeColor_2)]/30 transition-all"
+    className="w-full flex flex-row items-start gap-8 p-8 transition-all"
   >
     <motion.div
       variants={containerVariants}
@@ -250,7 +236,7 @@ const renderDesktopView = (certification: Certification, index: number) => (
         {certification.description}
       </motion.p>
       <motion.div variants={itemVariants}>
-        <h4 className="text-[var(--textColor_3)] text-sm font-medium uppercase tracking-wider mb-2">
+        <h4 className="text-[var(--textColor_3)] text-sm font-medium uppercase tracking-wider mb-2.5">
           Highlights
         </h4>
         <motion.div
@@ -262,7 +248,8 @@ const renderDesktopView = (certification: Certification, index: number) => (
               key={`highlight-${i}`}
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
-              className="text-xs px-3 py-1 rounded-lg bg-[var(--themeColor_2)]/10 text-[var(--textColor_3)] border border-[var(--themeColor_2)]/30 hover:bg-[var(--themeColor_2)]/20 transition-all"
+              // className="text-xs px-3 py-1 rounded-lg bg-[var(--themeColor_2)]/10 text-[var(--textColor_3)] border border-[var(--themeColor_2)]/30 hover:bg-[var(--themeColor_2)]/20 transition-all"
+              className="text-sm px-4 py-2 rounded-lg bg-[var(--themeColor_1)] text-[var(--textColor_3)] border border-[var(--themeColor_2)]/30 hover:border-[var(--themeColor_2)]/50 transition-all"
             >
               {skill}
             </motion.span>

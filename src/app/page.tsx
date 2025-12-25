@@ -34,7 +34,7 @@ export default async function Home() {
       </div>
 
       {/* Gradient overlay - fixed to viewport */}
-      <div className="fixed inset-0 -z-40 bg-[var(--themeColor_1)]/80" />
+      <div className="fixed inset-0 -z-40 bg-[var(--themeColor_1)]/85" />
 
       <div className="relative z-10">
         <Header />

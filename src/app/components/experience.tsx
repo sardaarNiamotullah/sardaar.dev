@@ -64,7 +64,8 @@ export default function Experience() {
         >
           <motion.div
             variants={containerVariants}
-            className="relative bg-[var(--themeColor_1)]/10 backdrop-blur-sm p-8 border rounded-lg border-[var(--themeColor_2)]/20 hover:border-[var(--themeColor_2)]/30"
+            // className="relative bg-[var(--themeColor_1)]/10 backdrop-blur-sm p-8 border rounded-lg border-[var(--themeColor_2)]/20 hover:border-[var(--themeColor_2)]/30"
+            className="relative p-8"
           >
             {/* Experience Container */}
             <div className="flex gap-5">

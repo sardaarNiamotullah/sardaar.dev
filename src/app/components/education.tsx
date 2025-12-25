@@ -50,7 +50,8 @@ export default function Education() {
         >
           <motion.div
             variants={containerVariants}
-            className="relative bg-[var(--themeColor_1)]/10 backdrop-blur-sm p-8 rounded-lg border border-[var(--themeColor_2)]/20 hover:border-[var(--themeColor_2)]/30"
+            // className="relative bg-[var(--themeColor_1)]/10 backdrop-blur-sm p-8 rounded-lg border border-[var(--themeColor_2)]/20 hover:border-[var(--themeColor_2)]/30"
+            className="relative p-8"
           >
             {/* Main Degree Info */}
             <motion.div variants={itemVariants} className="mb-6">

@@ -8,7 +8,8 @@ import Link from "next/link";
 const phrases = [
   "Full Stack Software Engineer",
   "Dart, JavaScript, TypeScript",
-  "Flutter, ReactJS, NextJS, NestJS",
+  "Flutter, NextJS, NestJS",
+  "SQL, NoSQL, Supabase, Firebase",
 ];
 
 export default function Hero() {
@@ -72,7 +73,7 @@ export default function Hero() {
 
         {/* Content - Bottom */}
         <div className="text-center z-10 animate-slideInLeft-m">
-          <div className="text-[var(--textColor_3)] text-lg mb-2">
+          <div className="text-[var(--textColor_3)] text-base mb-2">
             Hi, I&apos;m
           </div>
           <h1 className="text-[var(--textColor_2)] text-4xl font-bold mb-4">
@@ -82,14 +83,25 @@ export default function Hero() {
             Niamotullah
           </h1>
 
-          <div className="text-[var(--textColor_3)] text-xl mb-4 h-8">
+          <div className="text-[var(--textColor_3)] text-xl mb-6 h-8">
             {typingText}
             <span className="animate-blink text-[var(--textColor_2)] font-bold">
               _
             </span>
           </div>
 
-          <div className="text-[var(--textColor_3)] text-lg mb-6">
+          <div className="text-[var(--textColor_3)] text-base mb-2">
+            Assoc. Mobile App Developer,{" "}
+            <Link
+              href="https://www.linkedin.com/company/inshirah-tech/posts/?feedView=all"
+              target="_blank"
+              className="pb-1 transition-colors border-b border-[var(--themeColor_2)] hover:text-[var(--themeColor_2)] hover:border-transparent"
+            >
+              Inshirah Tech
+            </Link>
+          </div>
+
+          <div className="text-[var(--textColor_3)] text-base mb-6">
             B.Sc. in Computer Science,{" "}
             <Link
               href="https://www.bracu.ac.bd/"
@@ -189,24 +201,35 @@ export default function Hero() {
 
             {/* Intro div */}
             <div className="w-2/3 h-full flex flex-col justify-center pl-8 animate-slideInLeft">
-              <div className="text-[var(--textColor_3)] text-lg mb-2">
+              <div className="text-[var(--textColor_3)] text-base mb-2">
                 Hi, I&apos;m
               </div>
-              <h1 className="text-[var(--textColor_2)] text-5xl font-bold mb-4">
+              <h1 className="text-[var(--textColor_2)] text-5xl font-bold mb-6">
                 <span className="font-thin text-[var(--textColor_3)]">
                   Sardaar
                 </span>{" "}
                 Niamotullah
               </h1>
 
-              <div className="text-[var(--textColor_3)] text-2xl mb-4 h-8">
+              <div className="text-[var(--textColor_3)] text-xl mb-6 h-8">
                 {typingText}
                 <span className="animate-blink text-[var(--textColor_2)] font-bold">
                   _
                 </span>
               </div>
 
-              <div className="text-[var(--textColor_3)] text-xl mb-6">
+              <div className="text-[var(--textColor_3)] text-base mb-2">
+                Assoc. Mobile App Developer,{" "}
+                <Link
+                  href="https://www.linkedin.com/company/inshirah-tech/posts/?feedView=all"
+                  target="_blank"
+                  className="pb-1 transition-colors border-b border-[var(--themeColor_2)] hover:text-[var(--themeColor_2)] hover:border-transparent"
+                >
+                  Inshirah Tech
+                </Link>
+              </div>
+
+              <div className="text-[var(--textColor_3)] text-base mb-6">
                 B.Sc. in Computer Science,{" "}
                 <Link
                   href="https://www.bracu.ac.bd/"

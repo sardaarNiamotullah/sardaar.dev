@@ -12,8 +12,7 @@ import {
 const skillCategories = [
   {
     title: "Languages",
-    confident: ["C/C++", "JS/TS/NodeJS", "Dart", "Python"],
-    familiar: ["Java"],
+    skills: ["Dart", "JavaScript", "TypeScript"],
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -29,27 +28,25 @@ const skillCategories = [
       </svg>
     ),
   },
+  // {
+  //   title: "Frontend",
+  //   skills: ["Flutter", "ReactJS", "NextJS"],
+  //   icon: (
+  //     <svg
+  //       xmlns="http://www.w3.org/2000/svg"
+  //       viewBox="0 0 24 24"
+  //       fill="currentColor"
+  //       className="w-6 h-6"
+  //     >
+  //       <path d="M11.644 1.59a.75.75 0 01.712 0l9.75 5.25a.75.75 0 010 1.32l-9.75 5.25a.75.75 0 01-.712 0l-9.75-5.25a.75.75 0 010-1.32l9.75-5.25z" />
+  //       <path d="M3.265 10.602l7.668 4.129a2.25 2.25 0 002.134 0l7.668-4.13 1.37.739a.75.75 0 010 1.32l-9.75 5.25a.75.75 0 01-.71 0l-9.75-5.25a.75.75 0 010-1.32l1.37-.738z" />
+  //       <path d="M10.933 19.231l-7.668-4.13-1.37.739a.75.75 0 000 1.32l9.75 5.25c.221.12.489.12.71 0l9.75-5.25a.75.75 0 000-1.32l-1.37-.738-7.668 4.13a2.25 2.25 0 01-2.134-.001z" />
+  //     </svg>
+  //   ),
+  // },
   {
-    title: "Frontend",
-    confident: ["Flutter", "ReactJS", "NextJS", "TailwindCSS", "SASS", "Vite"],
-    familiar: ["Bootstrap", "React Native"],
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="currentColor"
-        className="w-6 h-6"
-      >
-        <path d="M11.644 1.59a.75.75 0 01.712 0l9.75 5.25a.75.75 0 010 1.32l-9.75 5.25a.75.75 0 01-.712 0l-9.75-5.25a.75.75 0 010-1.32l9.75-5.25z" />
-        <path d="M3.265 10.602l7.668 4.129a2.25 2.25 0 002.134 0l7.668-4.13 1.37.739a.75.75 0 010 1.32l-9.75 5.25a.75.75 0 01-.71 0l-9.75-5.25a.75.75 0 010-1.32l1.37-.738z" />
-        <path d="M10.933 19.231l-7.668-4.13-1.37.739a.75.75 0 000 1.32l9.75 5.25c.221.12.489.12.71 0l9.75-5.25a.75.75 0 000-1.32l-1.37-.738-7.668 4.13a2.25 2.25 0 01-2.134-.001z" />
-      </svg>
-    ),
-  },
-  {
-    title: "Backend",
-    confident: ["ExpressJS", "NodeJS", "Django"],
-    familiar: ["Spring Boot"],
+    title: "Frameworks",
+    skills: ["Flutter", "NextJS", "NestJS"],
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -73,8 +70,12 @@ const skillCategories = [
   },
   {
     title: "Databases",
-    confident: ["PostgreSQL", "MySQL", "Supabase", "Firebase", "Vector", "Pgvector"],
-    familiar: ["MongoDB"],
+    skills: [
+      "SQL",
+      "NoSQL",
+      "Supabase",
+      "Firebase"
+    ],
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -91,8 +92,7 @@ const skillCategories = [
   },
   {
     title: "Essentials",
-    confident: ["Git", "GitHub", "Terminal", "Postman"],
-    familiar: ["Docker"],
+    skills: ["Git", "GitHub", "Terminal", "Postman"],
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -158,7 +158,8 @@ const Tools = () => {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="w-full bg-[var(--themeColor_1)]/10 backdrop-blur-sm border border-[var(--themeColor_2)]/20 rounded-xl p-8 hover:border-[var(--themeColor_2)]/30 transition-all"
+              // className="w-full bg-[var(--themeColor_1)]/10 backdrop-blur-sm border border-[var(--themeColor_2)]/20 rounded-xl p-8 hover:border-[var(--themeColor_2)]/30 transition-all"
+              className="w-full p-8 transition-all"
             >
               <motion.div
                 variants={containerVariants}
@@ -180,77 +181,19 @@ const Tools = () => {
 
               <motion.div
                 variants={containerVariants}
-                className="grid grid-cols-1 md:grid-cols-2 gap-8"
+                className="flex flex-wrap gap-3"
               >
-                {/* Confident Skills */}
-                <motion.div variants={itemVariants}>
-                  <motion.div
-                    variants={containerVariants}
-                    className="flex items-center gap-3 mb-4"
+                {category.skills.map((skill, skillIndex) => (
+                  <motion.span
+                    key={skillIndex}
+                    variants={itemVariants}
+                    whileHover={{ scale: 1.05 }}
+                    // className="text-sm px-4 py-2 rounded-lg bg-[var(--themeColor_2)]/10 text-[var(--textColor_3)] border border-[var(--themeColor_2)]/30 hover:bg-[var(--themeColor_2)]/20 transition-all"
+                    className="text-sm px-4 py-2 rounded-lg bg-[var(--themeColor_1)] text-[var(--textColor_3)] border border-[var(--themeColor_2)]/30 hover:border-[var(--themeColor_2)]/50 transition-all"
                   >
-                    <motion.div
-                      variants={itemVariants}
-                      className="w-3 h-3 rounded-full bg-green-500"
-                    ></motion.div>
-                    <motion.h4
-                      variants={itemVariants}
-                      className="text-[var(--textColor_3)] text-sm font-medium uppercase tracking-wider"
-                    >
-                      Experienced in
-                    </motion.h4>
-                  </motion.div>
-                  <motion.div
-                    variants={containerVariants}
-                    className="flex flex-wrap gap-3"
-                  >
-                    {category.confident.map((skill, skillIndex) => (
-                      <motion.span
-                        key={`confident-${skillIndex}`}
-                        variants={itemVariants}
-                        whileHover={{ scale: 1.05 }}
-                        className="text-sm px-4 py-2 rounded-lg bg-[var(--themeColor_2)]/10 text-[var(--textColor_3)] border border-[var(--themeColor_2)]/30 hover:bg-[var(--themeColor_2)]/20 transition-all"
-                      >
-                        {skill}
-                      </motion.span>
-                    ))}
-                  </motion.div>
-                </motion.div>
-
-                {/* Familiar Skills */}
-                {category.familiar.length > 0 && (
-                  <motion.div variants={itemVariants}>
-                    <motion.div
-                      variants={containerVariants}
-                      className="flex items-center gap-3 mb-4"
-                    >
-                      <motion.div
-                        variants={itemVariants}
-                        className="w-3 h-3 rounded-full bg-yellow-500"
-                      ></motion.div>
-                      <motion.h4
-                        variants={itemVariants}
-                        className="text-[var(--textColor_3)] text-sm font-medium uppercase tracking-wider"
-                      >
-                        Hands-on exposure to
-                      </motion.h4>
-                    </motion.div>
-                    <motion.div
-                      variants={containerVariants}
-                      className="flex flex-wrap gap-3"
-                    >
-                      {category.familiar.map((skill, skillIndex) => (
-                        <motion.span
-                          key={`familiar-${skillIndex}`}
-                          variants={itemVariants}
-                          whileHover={{ scale: 1.05 }}
-                          className="text-sm px-4 py-2 rounded-lg bg-[var(--themeColor_1)] text-[var(--textColor_3)] border border-[var(--themeColor_2)]/30 hover:border-[var(--themeColor_2)]/50 transition-all"
-                        >
-                          {skill}
-                        </motion.span>
-                      ))}
-                    </motion.div>
-                  </motion.div>
-                )}
+                    {skill}
+                  </motion.span>
+                ))}
               </motion.div>
             </motion.div>
           ))}
