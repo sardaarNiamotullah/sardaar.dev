@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Bad_Script } from "next/font/google";
-import { SpeedInsights } from '@vercel/speed-insights/next';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import LoadingScreen from "./components/LoadingScreen";
 import "./globals.css";
@@ -23,9 +23,20 @@ const badScript = Bad_Script({
 
 export const metadata: Metadata = {
   title: "Sardaar Niamotullah",
-  description: "Software Enginner",
+  description: "Software Engineer",
+  applicationName: "sardaar.dev",
+
   icons: {
     icon: "/icon/favicon.png",
+  },
+
+  openGraph: {
+    title: "Sardaar Niamotullah",
+    description:
+      "Personal portfolio showcasing projects, skills, and experience.",
+    url: "https://www.sardaar.dev",
+    siteName: "sardaar.dev",
+    type: "website",
   },
 };
 
