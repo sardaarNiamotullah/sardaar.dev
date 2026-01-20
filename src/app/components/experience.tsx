@@ -118,7 +118,7 @@ export default function Experience() {
                         Sep 2025 – Present • {getDurationInMonths("2025-09-01")}
                       </p>
                       <p className="text-[var(--themeColor_2)] text-sm mb-3">
-                        [Flutter, Dart, Generative AI, Supabase, Firebase, APIs,
+                        [Dart, Flutter, Firebase, Supabase, APIs,
                         Figma]
                       </p>
                       <ul className="list-disc list-inside text-[var(--textColor_3)] text-sm leading-relaxed space-y-2 ml-4">
@@ -132,11 +132,6 @@ export default function Experience() {
                           responsive, pixel-perfect UIs from Figma, while
                           integrating REST APIs, Google Maps, and other
                           location-based services.
-                        </li>
-                        <li>
-                          Exploring and implementing Generative AI solutions
-                          alongside mobile development to deliver innovative,
-                          scalable features.
                         </li>
                       </ul>
                     </div>

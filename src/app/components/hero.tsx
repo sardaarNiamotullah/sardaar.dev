@@ -7,8 +7,7 @@ import Link from "next/link";
 
 const phrases = [
   "Full Stack Software Engineer",
-  "Dart, JavaScript, TypeScript",
-  "Flutter, NextJS, NestJS",
+  "Dart, Flutter, TypeScript, NestJS",
   "SQL, NoSQL, Supabase, Firebase",
 ];
 
@@ -118,10 +117,10 @@ export default function Hero() {
               whileTap={{ scale: 0.95 }}
               className="bg-[var(--themeColor_2)] text-[var(--textColor_4)] px-3 py-2 rounded hover:bg-[var(--themeColor_2_light)] transition-colors cursor-pointer text-sm"
               onClick={() => {
-                const cvUrl = "/resume/sardaar_niamotullah-CV.pdf";
+                const cvUrl = "/resume/Sardaar_Niamotullah-CV.pdf";
                 const link = document.createElement("a");
                 link.href = cvUrl;
-                link.download = "sardaar_niamotullah-CV.pdf";
+                link.download = "Sardaar_Niamotullah-CV.pdf";
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
@@ -246,10 +245,10 @@ export default function Hero() {
                   whileTap={{ scale: 0.95 }}
                   className="bg-[var(--themeColor_2)] text-[var(--textColor_4)] px-4 py-2 rounded hover:bg-[var(--themeColor_2_light)] transition-colors cursor-pointer text-sm"
                   onClick={() => {
-                    const cvUrl = "/resume/sardaar_niamotullah-CV.pdf";
+                    const cvUrl = "/resume/Sardaar_Niamotullah-CV.pdf";
                     const link = document.createElement("a");
                     link.href = cvUrl;
-                    link.download = "sardaar_niamotullah-CV.pdf";
+                    link.download = "Sardaar_Niamotullah-CV.pdf";
                     document.body.appendChild(link);
                     link.click();
                     document.body.removeChild(link);

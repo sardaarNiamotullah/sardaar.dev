@@ -12,7 +12,7 @@ import {
 const skillCategories = [
   {
     title: "Languages",
-    skills: ["Dart", "JavaScript", "TypeScript"],
+    skills: ["Dart", "TypeScript"],
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +46,7 @@ const skillCategories = [
   // },
   {
     title: "Frameworks",
-    skills: ["Flutter", "NextJS", "NestJS"],
+    skills: ["Flutter", "NestJS"],
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"

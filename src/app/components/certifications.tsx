@@ -22,6 +22,17 @@ interface Certification {
 
 const certifications: Certification[] = [
   {
+    title: "The Complete Flutter Development Bootcamp with Dart",
+    organization: "Udemy",
+    year: "2024",
+    certificateUrl:
+      "https://www.udemy.com/certificate/UC-cb30d9b9-8067-4d7b-adce-22f444b142ac/",
+    description:
+      "Learned how to build beautiful and responsive cross-platform mobile apps using Flutter and Dart. Worked on various real-world projects with state management.",
+    image: "/certifications/flutterbootcamp.jpg",
+    highlights: ["Flutter", "Dart", "State Management", "Mobile UI"],
+  },
+  {
     title: "Node.js, Express, MongoDB & More: The Complete Bootcamp",
     organization: "Udemy",
     year: "2024",
@@ -49,35 +60,7 @@ const certifications: Certification[] = [
     image: "/certifications/ultimatereact.jpg",
     highlights: ["React", "Next.js", "Redux", "TypeScript", "React Hooks"],
   },
-  {
-    title: "The Complete Flutter Development Bootcamp with Dart",
-    organization: "Udemy",
-    year: "2024",
-    certificateUrl:
-      "https://www.udemy.com/certificate/UC-cb30d9b9-8067-4d7b-adce-22f444b142ac/",
-    description:
-      "Learned how to build beautiful and responsive cross-platform mobile apps using Flutter and Dart. Worked on various real-world projects with state management.",
-    image: "/certifications/flutterbootcamp.jpg",
-    highlights: [
-      "Flutter",
-      "Dart",
-      "State Management",
-      "Mobile UI",
-    ],
-  },
-  {
-    title: "The Complete 2023 Web Development Bootcamp",
-    organization: "Udemy",
-    year: "2023",
-    certificateUrl:
-      "https://www.udemy.com/certificate/UC-ad942bcb-58c4-4fca-a7f3-6603e965a68f/",
-    description:
-      "Built a solid foundation in full-stack web development, covering HTML, CSS, JavaScript (ES6+). Created multiple real-world projects.",
-    image: "/certifications/thebootcamp_2023.jpg",
-    highlights: ["JavaScript", "ES6", "HTML", "CSS", "Async Programming"],
-  },
 ];
-
 
 const renderActionButton = (certificateUrl: string) => (
   <motion.div
@@ -293,12 +276,12 @@ export default function Certifications() {
         <div className="flex flex-col gap-8">
           <div className="md:hidden space-y-8">
             {certifications.map((certification, index) =>
-              renderMobileView(certification, index)
+              renderMobileView(certification, index),
             )}
           </div>
           <div className="hidden md:block space-y-8">
             {certifications.map((certification, index) =>
-              renderDesktopView(certification, index)
+              renderDesktopView(certification, index),
             )}
           </div>
         </div>
