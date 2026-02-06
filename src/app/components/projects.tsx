@@ -23,10 +23,20 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "Verbie",
+    description:
+      "The all-in-one visual communication suite that grows with your child. Powered by AI, designed for families, and created by people that care.",
+    tech: ["Dart", "Flutter", "Firebase", "GetX"],
+    github: "",
+    demo: "",
+    live: "https://verbie.co.uk/",
+    image: "/project-snapshots/verbie.png",
+  },
+  {
     title: "Dllalna",
     description:
       "Dllalna is a real estate app where users can create accounts as buyers, sellers, or brokers. The platform allows users to buy properties, publish ads for their own properties, and even hire brokers seamlessly.",
-    tech: ["Flutter", "Dart", "Supabase", "GetX"],
+    tech: ["Dart", "Flutter", "Supabase", "GetX"],
     github: "",
     demo: "",
     live: "",
@@ -36,7 +46,7 @@ const projects: Project[] = [
     title: "Routivise",
     description:
       "Routivise is a fitness app that keeps track of users' daily goals, exercises, and eating habits. It also provides personalized suggestions from a built-in AI to help users stay consistent with their fitness journey.",
-    tech: ["Flutter", "Dart", "Generative AI", "Supabase", "GetX"],
+    tech: ["Dart", "Flutter", "Generative AI", "Supabase", "GetX"],
     github: "",
     demo: "",
     live: "",
@@ -480,7 +490,7 @@ export default function Projects() {
           </div>
           <div className="hidden md:block space-y-8">
             {projects.map((project, index) =>
-              renderDesktopView(project, index)
+              renderDesktopView(project, index),
             )}
           </div>
         </div>
